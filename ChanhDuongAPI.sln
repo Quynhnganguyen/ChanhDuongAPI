@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChanhDuongAPI", "ChanhDuongAPI\ChanhDuongAPI.csproj", "{7550F8B1-BF96-419E-A2EC-9BC88C474446}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChuaNgotApp", "ChuaNgotApp\ChuaNgotApp.csproj", "{AD965C8C-1B67-4694-A291-25B15AB8CC22}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7550F8B1-BF96-419E-A2EC-9BC88C474446}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7550F8B1-BF96-419E-A2EC-9BC88C474446}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7550F8B1-BF96-419E-A2EC-9BC88C474446}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7550F8B1-BF96-419E-A2EC-9BC88C474446}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD965C8C-1B67-4694-A291-25B15AB8CC22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD965C8C-1B67-4694-A291-25B15AB8CC22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD965C8C-1B67-4694-A291-25B15AB8CC22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD965C8C-1B67-4694-A291-25B15AB8CC22}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {38154A33-034B-482F-80CD-9F048391A2A4}
+	EndGlobalSection
+EndGlobal
