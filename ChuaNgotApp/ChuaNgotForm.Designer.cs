@@ -43,21 +43,21 @@
             // 
             // fibonacciButton
             // 
-            this.fibonacciButton.Location = new System.Drawing.Point(25, 76);
+            this.fibonacciButton.Location = new System.Drawing.Point(458, 22);
             this.fibonacciButton.Name = "fibonacciButton";
-            this.fibonacciButton.Size = new System.Drawing.Size(234, 48);
+            this.fibonacciButton.Size = new System.Drawing.Size(224, 47);
             this.fibonacciButton.TabIndex = 1;
             this.fibonacciButton.Text = "Compute Fibonancci";
             this.fibonacciButton.UseVisualStyleBackColor = true;
-            this.fibonacciButton.Click += new System.EventHandler(this.fibonacciButton_Click);
+            this.fibonacciButton.Click += new System.EventHandler(this.FibonacciButton_Click);
             // 
-            // textBox1
+            // textBoxForN
             // 
             this.textBoxForN.Location = new System.Drawing.Point(82, 25);
-            this.textBoxForN.Name = "textBox1";
+            this.textBoxForN.Name = "textBoxForN";
             this.textBoxForN.Size = new System.Drawing.Size(137, 26);
             this.textBoxForN.TabIndex = 2;
-            this.textBoxForN.TextChanged += new System.EventHandler(this.textBoxForN_TextChanged);
+            this.textBoxForN.TextChanged += new System.EventHandler(this.TextBoxForN_TextChanged);
             // 
             // label1
             // 
@@ -81,9 +81,9 @@
             this.groupBox1.Controls.Add(this.xmlToJsonButton);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.texBoxForXml);
-            this.groupBox1.Location = new System.Drawing.Point(31, 218);
+            this.groupBox1.Location = new System.Drawing.Point(31, 172);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(739, 187);
+            this.groupBox1.Size = new System.Drawing.Size(739, 171);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "XmlToJson";
@@ -92,11 +92,11 @@
             // 
             this.xmlToJsonButton.Location = new System.Drawing.Point(25, 106);
             this.xmlToJsonButton.Name = "xmlToJsonButton";
-            this.xmlToJsonButton.Size = new System.Drawing.Size(234, 48);
+            this.xmlToJsonButton.Size = new System.Drawing.Size(217, 42);
             this.xmlToJsonButton.TabIndex = 2;
             this.xmlToJsonButton.Text = "Convert To JSON";
             this.xmlToJsonButton.UseVisualStyleBackColor = true;
-            this.xmlToJsonButton.Click += new System.EventHandler(this.xmlToJsonButton_Click);
+            this.xmlToJsonButton.Click += new System.EventHandler(this.XmlToJsonButton_Click);
             // 
             // label3
             // 
@@ -107,13 +107,13 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "XML";
             // 
-            // textBox2
+            // texBoxForXml
             // 
             this.texBoxForXml.Location = new System.Drawing.Point(82, 43);
-            this.texBoxForXml.Name = "textBox2";
+            this.texBoxForXml.Name = "texBoxForXml";
             this.texBoxForXml.Size = new System.Drawing.Size(651, 26);
             this.texBoxForXml.TabIndex = 0;
-            this.texBoxForXml.TextChanged += new System.EventHandler(this.textBoxForXml_TextChanged);
+            this.texBoxForXml.TextChanged += new System.EventHandler(this.TextBoxForXml_TextChanged);
             // 
             // groupBox2
             // 
@@ -122,7 +122,7 @@
             this.groupBox2.Controls.Add(this.fibonacciButton);
             this.groupBox2.Location = new System.Drawing.Point(31, 34);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(291, 153);
+            this.groupBox2.Size = new System.Drawing.Size(739, 86);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Fibonacci";
@@ -131,7 +131,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(802, 377);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);

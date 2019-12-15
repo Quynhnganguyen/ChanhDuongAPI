@@ -34,7 +34,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,8 +54,13 @@
     <Compile Include="ChuaNgotForm.Designer.cs">
       <DependentUpon>ChuaNgotForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PleaseWaitForm.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SoapResponse\FibonacciResponse.cs" />
+    <Compile Include="SoapResponse\XmlToJsonResponse.cs" />
+    <Compile Include="Utils\SerializerXml.cs" />
+    <Compile Include="Utils\SoapService.cs" />
     <EmbeddedResource Include="ChuaNgotForm.resx">
       <DependentUpon>ChuaNgotForm.cs</DependentUpon>
     </EmbeddedResource>
