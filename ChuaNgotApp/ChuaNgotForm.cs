@@ -1,9 +1,7 @@
 ﻿using ChuaNgotApp.SoapResponse;
 using ChuaNgotApp.Utils;
 using System;
-using System.IO;
 using System.Windows.Forms;
-using System.Xml.Serialization;
 
 namespace ChuaNgotApp
 {
@@ -27,15 +25,24 @@ namespace ChuaNgotApp
             {
                 string body = @"<Fibonacci xmlns=""http://chanhduong.org/""><n>" + n + "</n></Fibonacci>";
                 SoapService soapService = new SoapService(ChanhDuongURL);
+                DialogResult messageBox;
+                string textMessage = "";
+                string captionMessage = "";
                 try
                 {
                     soapService.SendRequest(body).Wait();
-                    FibonacciResponse result = (FibonacciResponse)SerializerXml.Deserialize(typeof(FibonacciResponse), soapService.response);
-                    DialogResult a = MessageBox.Show(result.FibonacciResult, "Fibonacci of " + n, MessageBoxButtons.OK);
+                    FibonacciResponse result = (FibonacciResponse)SerializerSoapXml.Deserialize(typeof(FibonacciResponse), soapService.response);
+                    textMessage = result.FibonacciResult;
+                    captionMessage = "Fibonacci of " + n;
                 }
                 catch (Exception ex)
                 {
-
+                    textMessage = ex.Message;
+                    captionMessage = "Error";
+                }
+                finally
+                {
+                    messageBox = MessageBox.Show(textMessage, captionMessage, MessageBoxButtons.OK);
                 }
             }
         }
@@ -47,9 +54,25 @@ namespace ChuaNgotApp
                 string xmlToSend = xml?.Replace("<", "&lt;");
                 string body = @"<XmlToJson xmlns=""http://chanhduong.org/""><xml>" + xmlToSend + "</xml></XmlToJson>";
                 SoapService soapService = new SoapService(ChanhDuongURL);
-                soapService.SendRequest(body).Wait();
-                XmlToJsonResponse result = (XmlToJsonResponse)SerializerXml.Deserialize(typeof(XmlToJsonResponse), soapService.response);
-                DialogResult a = MessageBox.Show(result.XmlToJsonResult, "Json", MessageBoxButtons.OK);
+                DialogResult messageBox;
+                string textMessage = "";
+                string captionMessage = "";
+                try
+                {
+                    soapService.SendRequest(body).Wait();
+                    XmlToJsonResponse result = (XmlToJsonResponse)SerializerSoapXml.Deserialize(typeof(XmlToJsonResponse), soapService.response);
+                    textMessage = result.XmlToJsonResult;
+                    captionMessage = "Json";
+                }
+                catch (Exception ex)
+                {
+                    textMessage = ex.Message;
+                    captionMessage = "Error";
+                }
+                finally
+                {
+                    messageBox = MessageBox.Show(textMessage, captionMessage, MessageBoxButtons.OK);
+                }
             }
         }
 
