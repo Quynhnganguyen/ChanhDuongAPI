@@ -12,7 +12,7 @@ namespace ChuaNgotApp
         private bool fibonacciValid;
         private bool xmlValid;
         private const string ChanhDuongURL = "https://localhost:44382/ChuaNgotService.asmx";
-        PleaseWaitForm pleaseWait = new PleaseWaitForm();
+
 
         public ChuaNgotForm()
         {
@@ -23,9 +23,10 @@ namespace ChuaNgotApp
         {
             if (fibonacciValid)
             {
+                Form waitForm = new WaitForm(this);
+                waitForm.Show(this);
                 string body = @"<Fibonacci xmlns=""http://chanhduong.org/""><n>" + n + "</n></Fibonacci>";
                 SoapService soapService = new SoapService(ChanhDuongURL);
-                DialogResult messageBox;
                 string textMessage = "";
                 string captionMessage = "";
                 try
@@ -42,19 +43,26 @@ namespace ChuaNgotApp
                 }
                 finally
                 {
-                    messageBox = MessageBox.Show(textMessage, captionMessage, MessageBoxButtons.OK);
+                    waitForm.Close();
+                    MessageBox.Show(textMessage, captionMessage, MessageBoxButtons.OK);
                 }
             }
+            else
+            {
+                MessageBox.Show("N is blank!", "Info", MessageBoxButtons.OK);
+            }
+
         }
 
         private void XmlToJsonButton_Click(object sender, EventArgs e)
         {
             if (xmlValid)
             {
+                Form waitForm = new WaitForm(this);
+                waitForm.Show(this);
                 string xmlToSend = xml?.Replace("<", "&lt;");
                 string body = @"<XmlToJson xmlns=""http://chanhduong.org/""><xml>" + xmlToSend + "</xml></XmlToJson>";
                 SoapService soapService = new SoapService(ChanhDuongURL);
-                DialogResult messageBox;
                 string textMessage = "";
                 string captionMessage = "";
                 try
@@ -71,9 +79,15 @@ namespace ChuaNgotApp
                 }
                 finally
                 {
-                    messageBox = MessageBox.Show(textMessage, captionMessage, MessageBoxButtons.OK);
+                    waitForm.Close();
+                    MessageBox.Show(textMessage, captionMessage, MessageBoxButtons.OK);
                 }
             }
+            else
+            {
+                MessageBox.Show("Xml is blank!", "Info", MessageBoxButtons.OK);
+            }
+
         }
 
         private void TextBoxForN_TextChanged(object sender, EventArgs e)
@@ -82,7 +96,21 @@ namespace ChuaNgotApp
             {
                 fibonacciValid = true;
                 if (textBox != null)
-                    n = Int32.Parse(textBox.Text);
+                    try
+                    {
+                        n = Int32.Parse(textBox.Text);
+                    }
+                    catch (FormatException)
+                    {
+                        if (!String.IsNullOrEmpty(textBox.Text))
+                        {
+                            MessageBox.Show("N must be an int!", "Info", MessageBoxButtons.OK);
+                        }
+                        else
+                        {
+                            fibonacciValid = false;
+                        }
+                    }
                 else
                     fibonacciValid = false;
             }

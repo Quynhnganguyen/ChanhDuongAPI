@@ -1,4 +1,6 @@
-﻿namespace ChuaNgotApp
+﻿using System.Windows.Forms;
+
+namespace ChuaNgotApp
 {
     partial class ChuaNgotForm
     {
@@ -136,6 +138,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
             this.Name = "ChuaNgotForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChuaNgotApp";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
