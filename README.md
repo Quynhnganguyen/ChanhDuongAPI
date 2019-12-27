@@ -42,6 +42,8 @@ For checking this application, there are 3 steps:
 2. Run the Webservice ChuaNgotApi on `localhost`.
 3. Run file `ChuaNgotApp.exe` for testing
 
-You can have this interface when testing:
+You can have these interfaces when testing:
 
 ![ChuaNgotApp](ChuaNgotInterface.png)
+![ChuaNgotFibonacci](ChuaNgotFibonacci.png)
+![ChuaNgotXmlToJson](ChuaNgotXmlToJson.png)
