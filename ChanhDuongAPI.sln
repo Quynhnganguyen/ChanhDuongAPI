@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChanhDuongAPI", "ChanhDuong
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChuaNgotApp", "ChuaNgotApp\ChuaNgotApp.csproj", "{AD965C8C-1B67-4694-A291-25B15AB8CC22}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChanhDuongApiConsumer", "ChanhDuongApiConsumer\ChanhDuongApiConsumer.csproj", "{29D9AF0B-C023-49EA-9DB6-F851F8056714}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7550F8B1-BF96-419E-A2EC-9BC88C474446} = {7550F8B1-BF96-419E-A2EC-9BC88C474446}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +26,10 @@ Global
 		{AD965C8C-1B67-4694-A291-25B15AB8CC22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD965C8C-1B67-4694-A291-25B15AB8CC22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD965C8C-1B67-4694-A291-25B15AB8CC22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29D9AF0B-C023-49EA-9DB6-F851F8056714}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29D9AF0B-C023-49EA-9DB6-F851F8056714}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29D9AF0B-C023-49EA-9DB6-F851F8056714}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29D9AF0B-C023-49EA-9DB6-F851F8056714}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
