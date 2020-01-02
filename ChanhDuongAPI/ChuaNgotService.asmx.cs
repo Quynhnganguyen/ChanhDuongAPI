@@ -19,6 +19,7 @@ namespace ChanhDuongAPI
         [WebMethod]
         public string Fibonacci(int n)
         {
+            System.Threading.Thread.Sleep(2000);
             BigInteger response = -1;
             if (1<= n && n <= 100)
             {
