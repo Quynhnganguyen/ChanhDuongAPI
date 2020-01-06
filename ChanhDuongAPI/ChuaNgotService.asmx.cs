@@ -17,6 +17,7 @@ namespace ChanhDuongAPI
         [WebMethod]
         public string Fibonacci(int n)
         {
+            System.Threading.Thread.Sleep(2000);
             BigInteger response = ServicesCore.Fibonacci.Calculate(n);
             return response.ToString();
         }
